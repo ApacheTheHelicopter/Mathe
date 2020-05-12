@@ -52,12 +52,12 @@ public class mainFile {
 		
 		if (RVDIVX2 == RVDIVX3) {
 			isTRUE2 = 1;
+			System.out.print("Geraden sind Parallel!");
 		} else {
 			isTRUE2 = 0;
 		}
 		
-		System.out.println(isTRUE);
-		System.out.println(isTRUE2);
+		
 		
 		// Identisch
 		// OV1 in Gerade 2 einsetzen
@@ -71,7 +71,7 @@ public class mainFile {
 		
 		// Jetzt steht nur noch OV1 da; SystemXn = r*RV2
 		// Gleichungssystem aufstellen und Lösungen checken
-		
+		// Wie in aller Welt löst man diese Gleichung in java
 		
 		
 		
