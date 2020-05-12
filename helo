@@ -1,1 +1,9 @@
 j
+
+
+
+if (no == yes) {
+    System.out.println("Hello.");
+} else {
+    println("no");
+}
