@@ -64,3 +64,23 @@ if (define == "add"):
     print(g + h)
 else:
     print(g - h)
+
+# functions
+
+def function1 ():
+    print("This is inside a function")
+    print("I wonder what cool things I can do with this")
+
+# end of function 1
+
+def function2 ():
+    print("This is the second function.")
+    print("Notice, how you called this one instead of the other function. What does this say about you?")
+
+print("Please input either function 1 or function 2");
+call1 = input()
+
+if (call1 == "function 1"):
+    print(function1())
+else:
+    print(function2())
