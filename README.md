@@ -1,4 +1,4 @@
-# Mathe
+# Math
 Instead of doing my Math homework, I´m writing programs to automate them. 
 
 
