@@ -49,3 +49,18 @@ print()
 
 # Now, glory behold: A probably dumb calculator
 
+print("Define two numbers: ")
+g = float(input())
+h = float(input())
+
+print()
+
+print("Define what you want to do: ")
+print("(Choose from: add and substract)")
+
+define = input()
+
+if (define == "add"):
+    print(g + h)
+else:
+    print(g - h)
