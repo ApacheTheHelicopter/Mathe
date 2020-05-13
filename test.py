@@ -29,5 +29,23 @@ else:
 
 print("Oh, so you´re " + ageref);
 
+# greater or smaller
+print();
+print("Please specify two numbers to check: ")
+e = str(float(input()))
+print("and: ")
+f = str(float(input()))
 
+
+if e < f:
+    print(e + " is less than " + f)
+elif e == f:
+    print(e + " is equal to " + f)
+else:
+    print(e + " is greater than " + f)
+
+print()
+print()
+
+# Now, glory behold: A probably dumb calculator
 
