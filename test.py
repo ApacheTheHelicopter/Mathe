@@ -47,7 +47,7 @@ else:
 print()
 print()
 
-# Now, glory behold: A dumb calculator
+# Now, glory behold: A dumb calculator; What about an interface next?
 
 print("Define two numbers: ")
 g = float(input())
@@ -91,5 +91,15 @@ if (call1 == "function 1"):
 else:
     print(function2())
 
-    #Mehr function tests
+# Mehr function tests, oder?
+# Was kann man noch mit Pyhton machen
+
+# Stringzeug
+
+variableA = "Dies ist ein String"
+
+
+
+def capitalize ():
+    variableA.capitalize()
 
