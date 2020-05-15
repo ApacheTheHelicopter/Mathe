@@ -96,10 +96,3 @@ else:
 
 # Stringzeug
 
-variableA = "Dies ist ein String"
-
-
-
-def capitalize ():
-    variableA.capitalize()
-
