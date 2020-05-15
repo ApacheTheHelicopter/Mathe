@@ -24,3 +24,8 @@ allel4 = "g"
 
 # randomizer
 
+def randomizer ():
+    rand1 = (allel1+allel2)*2
+    rand2 = (allel2+allel3)*2
+
+print(randomizer)
