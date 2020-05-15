@@ -12,21 +12,42 @@
 allel1 = "G"
 
     # 2. Allel
-allel2 = "g"
+allel2 = "G"
 
 # -- 2. Objekt
 
     # 3. Allel
-allel3 = "G"
+allel3 = "g"
 
     # 4. Allel
 allel4 = "g"
 
 # randomizer
 
-
-rand1 = (allel1+allel2)*2
-rand2 = (allel2+allel3)*2
-rand3 = rand1+rand2
-
-print(rand3)
+rand11 = (allel1+allel1)
+print(rand11)
+print()
+rand12 = (allel1+allel2)
+print(rand12)
+print()
+rand13 = (allel1+allel3)
+print(rand13)
+print()
+rand21 = (allel2+allel1)
+print(rand21)
+print()
+rand22 = (allel2+allel2)
+print(rand22)
+print()
+rand23 = (allel2+allel3)
+print(rand23)
+print()
+rand31 = (allel3+allel1)
+print(rand31)
+print()
+rand32 = (allel3+allel2)
+print(rand32)
+print()
+rand33 = (allel3+allel3)
+print(rand33)
+print()
