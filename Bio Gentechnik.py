@@ -23,6 +23,8 @@ allel3 = "g"
 allel4 = "g"
 
 # randomizer
+# ich hab irgendwie das Gefühl, dass das nicht die effizienteste Methode ist
+# Da kann man doch bestimmmt ne function von machen
 
 rand11 = (allel1+allel1)
 print(rand11)
