@@ -47,7 +47,7 @@ else:
 print()
 print()
 
-# Now, glory behold: A probably dumb calculator
+# Now, glory behold: A dumb calculator
 
 print("Define two numbers: ")
 g = float(input())
@@ -61,9 +61,15 @@ print("(Choose from: add and substract)")
 define = input()
 
 if (define == "add"):
-    print(g + h)
-else:
-    print(g - h)
+    print(g + h);
+if (define == "substract"):
+    print(g-h);
+if (define == "multiply"):
+    print(g*h);
+if (define == "divide"):
+    print(g/h);
+
+
 
 # functions
 
@@ -86,4 +92,4 @@ else:
     print(function2())
 
     #Mehr function tests
-    
+
