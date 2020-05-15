@@ -84,3 +84,6 @@ if (call1 == "function 1"):
     print(function1())
 else:
     print(function2())
+
+    #Mehr function tests
+    
