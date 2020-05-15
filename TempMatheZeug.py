@@ -1,7 +1,8 @@
-print("Hallo")
-
 print("Input number 1:")
 number1 = input()
+
+print()
+
 print("Input number 2:")
 number2 = input()
 
