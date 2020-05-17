@@ -17,7 +17,7 @@ from keras.preprocessing import image
 import cv2 
 import numpy as np
 import matplotlib.pyplot as plt
-import files
+
 
 mnist = tf.keras.datasets.fashion_mnist
 #variablen
@@ -66,6 +66,7 @@ plt.imshow(test_images[0], cmap='Greys_r')
 
 
 # funktioniert nicht wegen 'from google.colab import files'
+
 uploaded = files.upload()
 
 for fn in uploaded.keys():
