@@ -88,7 +88,7 @@ btn1 = Button(cal, padx=16, bd=8, fg="snow", bg="gray18",font=("Arial", 20), tex
 btn0 = Button(cal, padx=16, bd=8, fg="snow", bg="gray18",font=("Arial", 20), text="0", 
 command=lambda:btnClick(0)
     ).grid(row=5, column=1)
-btn3 = Button(cal, padx=16, bd=8, fg="snow", bg="gray18",font=("Arial", 20), text=",", 
+btn3 = Button(cal, padx=16, bd=8, fg="snow", bg="gray18",font=("Arial", 20), text=".", 
 command=lambda:btnClick(",")
     ).grid(row=5, column=2)
 divd = Button(cal, padx=16, bd=8, fg="snow", bg="gray18",font=("Arial", 20), text="/", 
