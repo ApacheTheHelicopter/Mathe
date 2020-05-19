@@ -64,7 +64,7 @@ plt.imshow(test_images[0], cmap='Greys_r')
 
 # Bilder import
 
-
+"""
 # funktioniert nicht wegen 'from google.colab import files'
 
 uploaded = files.upload()
@@ -95,3 +95,4 @@ for fn in uploaded.keys():
     plt.bar(range(10), classes([0]))
     plt.show()
     print("prediction: class", np.argmax(classes[0]))
+"""
