@@ -37,42 +37,41 @@ print("Choose two Vectors. Default value is 1 ")
 print("First: ")
 
 Vektor1 = np.array([])
-n = int(input("Enter the number of values you want:  "))
+n = int(input("Enter the dimensions you want:  "))
 
 for i in range(n):
     v = input("Element:  ")
-    Vektor1 = np.append(Vektor1, v)
+    Vektor1 = np.append(Vektor1, float(v))
 print(Vektor1)
 
 print("")
 print("Now the second vector: ")
 
 Vektor2 = np.array([])
-n = int(input("Enter the number of values you want:  "))
+n = int(input("Enter the dimensions you want:  "))
 
 for i in range(n):
     v = input("Element:  ")
-    Vektor2 = np.append(Vektor2, v)
+    Vektor2 = np.append(Vektor2, float(v))
 print(Vektor2)
 
-
 def VectorAdd(a, b):
-    str(c = a + b) 
-    return "c"
-
-def VektorSubs(a, b): 
-    a = Vektor1
-    b = Vektor2
-    c = a - b
+    c = np.add(a,b)
     return c
 
-def VektorMulti(a, b): 
+def VectorSubs(a, b): 
+    a = Vektor1
+    b = Vektor2
+    str(c = a - b)
+    return "c"
+
+def VectorMulti(a, b): 
     a = Vektor1
     b = Vektor2
     c = a * b 
     return c
 
-def VektorDivd(a, b): 
+def VectorDivd(a, b): 
     a = Vektor1
     b = Vektor2
     c = a / b
@@ -85,4 +84,10 @@ choose = input()
 
 if (choose == "add"):
     print(VectorAdd(Vektor1, Vektor2))
+if (choose == "sub"): 
+    print(VectorSubs(Vektor1, Vektor2))
+if (choose == "div"): 
+    print(VectorDivd(Vektor1, Vektor2))
+if (choose == "mult"): 
+    print(VectorMulti(Vektor1, Vektor2))
     
