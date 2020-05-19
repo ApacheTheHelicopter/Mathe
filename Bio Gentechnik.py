@@ -9,18 +9,18 @@
 # -- 1. Objekt
 
     # 1. Allel
-allel1 = " Hoher Ertrag "
+allel1 = " PP "
 
     # 2. Allel
-allel2 = " Niedriger Ertrag "
+allel2 = " RR "
 
 # -- 2. Objekt
 
     # 3. Allel
-allel3 = " lange Vegetationszeit "
+allel3 = " pp "
 
     # 4. Allel
-allel4 = " kurze Vegetationszeit "
+allel4 = " rr "
 
 # randomizer
 
