@@ -101,8 +101,8 @@ if (n.isdigit() == True):
         if (choose == "mult"): 
             print(VectorMulti(Vektor1, Vektor2))
         
-        else:
-            print("You took the wrong path, buddy. Enter a number next time.")
-            
     else:
         print("You took the wrong path, buddy. Enter a number next time.")
+            
+else:
+    print("You took the wrong path, buddy. Enter a number next time.")
