@@ -32,6 +32,8 @@ x2 = np.linspace(0, 10, N, endpoint=False)
 # vector add
 # wird mit arrays gemacht
 
+
+# TODO wenn string input nicht abbrechen, sondern neuen input anfordern
 print("Choose two Vectors. Default value is 1 ")
 
 print("First: ")
@@ -60,21 +62,16 @@ def VectorAdd(a, b):
     return c
 
 def VectorSubs(a, b): 
-    a = Vektor1
-    b = Vektor2
-    str(c = a - b)
-    return "c"
-
-def VectorMulti(a, b): 
-    a = Vektor1
-    b = Vektor2
-    c = a * b 
+    c = np.subtract(a,b)
     return c
 
+def VectorMulti(a, b): 
+    c = np.multiply(a,b)
+    return c
+
+# wenn /0 nicht inf, sondern 0 stehen haben oder so.
 def VectorDivd(a, b): 
-    a = Vektor1
-    b = Vektor2
-    c = a / b
+    c = np.divide(a, b)
     return c
 
 print("Choose what to do with the Vector!")
