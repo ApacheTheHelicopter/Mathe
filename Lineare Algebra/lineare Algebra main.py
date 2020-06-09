@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sympy import Eq, solve, symbols
 
 
 """
@@ -36,7 +37,7 @@ x2 = np.linspace(0, 10, N, endpoint=False)
 # TODO wenn string input nicht abbrechen, sondern neuen input anfordern
 print("Choose two matrices. Default value is 1 ")
 
-print("First: ")
+print("First matrice: ")
 
 Vektor1 = np.array([])
 n = input("Enter the dimensions you want:  ")
@@ -53,7 +54,7 @@ if (n.isdigit() == True):
     print(Vektor1)
 
     print("")
-    print("Now the second vector: ")
+    print("Now the second matrice: ")
 
     Vektor2 = np.array([])
     n = input("Enter the dimensions you want:  ")
@@ -92,6 +93,29 @@ if (n.isdigit() == True):
             print("Vektor zwischen A und B ist: ")
             return c
 
+        # Ouput: E: x = a + r*(b-a) + s*(c-a)
+        # Irgendwie Vektor 3 mit einbringen
+        def makeLayer(a,b,c):
+            print("Third matrice to make the Layer: ")
+
+            Vektor3 = np.array([])
+            n = input("Enter the dimensions you want:  ")
+
+            n.isdigit()
+
+            if (n.isdigit() == True):
+                n = int(n)
+                print("Ist digit!")
+                
+                for i in range(n):
+                    v = input("Element:  ")
+                    Vektor3 = np.append(Vektor1, float(v))
+                print(Vektor3)
+ 
+                print("")
+            c = print("E: x = ", a, " + r* ", (VectorSubs(b, a), " + s* ", VectorSubs(c, a)))
+            return c
+
         print()
         print()
         print("Choose what to do with the Vector!")
@@ -110,6 +134,8 @@ if (n.isdigit() == True):
             print(VectorMulti(Vektor1, Vektor2))
         if (choose == "makeVector"):
             print(VectorDraw(Vektor1, Vektor2))
+        if (choose == "makeLayer"):
+            print(VectorParameter(Vektor1, Vektor2, Vektor3))
         
     else:
         print("You took the wrong path, buddy. Enter a number next time.")
