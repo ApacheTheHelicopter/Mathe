@@ -34,7 +34,7 @@ x2 = np.linspace(0, 10, N, endpoint=False)
 
 
 # TODO wenn string input nicht abbrechen, sondern neuen input anfordern
-print("Choose two Vectors. Default value is 1 ")
+print("Choose two matrices. Default value is 1 ")
 
 print("First: ")
 
@@ -87,8 +87,16 @@ if (n.isdigit() == True):
             c = np.divide(a, b)
             return c
 
+        def VectorDraw(a, b):
+            c = np.subtract(b, a)
+            print("Vektor zwischen A und B ist: ")
+            return c
+
+        print()
+        print()
         print("Choose what to do with the Vector!")
         print("You can choose from 'add', 'sub', 'mult' and 'div'")
+        print("You can also draw a vector between two matrices by using 'makeVector'")
 
         choose = input()
 
@@ -100,6 +108,8 @@ if (n.isdigit() == True):
             print(VectorDivd(Vektor1, Vektor2))
         if (choose == "mult"): 
             print(VectorMulti(Vektor1, Vektor2))
+        if (choose == "makeVector"):
+            print(VectorDraw(Vektor1, Vektor2))
         
     else:
         print("You took the wrong path, buddy. Enter a number next time.")
