@@ -35,6 +35,11 @@ x2 = np.linspace(0, 10, N, endpoint=False)
 
 
 # TODO wenn string input nicht abbrechen, sondern neuen input anfordern
+
+#Vektor 3 declaren, damit er gecallt werden kann
+
+Vektor3 = 0
+
 print("Choose two matrices. Default value is 1 ")
 
 print("First matrice: ")
@@ -135,7 +140,7 @@ if (n.isdigit() == True):
         if (choose == "makeVector"):
             print(VectorDraw(Vektor1, Vektor2))
         if (choose == "makeLayer"):
-            print(VectorParameter(Vektor1, Vektor2, Vektor3))
+            print(makeLayer(Vektor1, Vektor2, Vektor3))
         
     else:
         print("You took the wrong path, buddy. Enter a number next time.")
