@@ -40,18 +40,18 @@ x2 = np.linspace(0, 10, N, endpoint=False)
 
 Vektor3 = 0
 
-print("Choose two matrices. Default value is 1 ")
+print("Geben Sie 2 Matrizen an. (Default Value=1) ")
 
-print("First matrice: ")
+print("Erste Matrize: ")
 
 Vektor1 = np.array([])
-n = input("Enter the dimensions you want:  ")
+n = input("Geben Sie die Dimensionen für die Matrize an:  ")
 
 n.isdigit()
 
 if (n.isdigit() == True):
     n = int(n)
-    print("Ist digit!")
+    print("Digit check succesful!")
     
     for i in range(n):
         v = input("Element:  ")
@@ -59,16 +59,16 @@ if (n.isdigit() == True):
     print(Vektor1)
 
     print("")
-    print("Now the second matrice: ")
+    print("Jetzt die zweite Matrix: ")
 
     Vektor2 = np.array([])
-    n = input("Enter the dimensions you want:  ")
+    n = input("Geben Sie die Dimensionen für die Matrize an:  ")
 
     n.isdigit()
 
     if (n.isdigit() == True):
         n = int(n)
-        print("Ist digit!")
+        print("Digit check successful!")
 
         # Code
         for i in range(n):
@@ -101,16 +101,18 @@ if (n.isdigit() == True):
         # Ouput: E: x = a + r*(b-a) + s*(c-a)
         # Irgendwie Vektor 3 mit einbringen
         def makeLayer(a,b,c):
-            print("Third matrice to make the Layer: ")
+            print("Geben Sie eine dritte Matrize an, um eine Ebene zu erstellen: ")
 
             Vektor3 = np.array([])
-            n = input("Enter the dimensions you want:  ")
+            n = input("Dimensionen für die Matrize:  ")
 
             n.isdigit()
 
             if (n.isdigit() == True):
                 n = int(n)
-                print("Ist digit!")
+                print()
+                print("Digit check successful")
+                print()
                 
                 for i in range(n):
                     v = input("Element:  ")
@@ -118,14 +120,18 @@ if (n.isdigit() == True):
                 print(Vektor3)
  
                 print("")
-            c = print("E: x = ", a, " + r* ", (VectorSubs(b, a), " + s* ", VectorSubs(c, a)))
+            c = print("E: x = ", a, " + r * ", VectorSubs(b, a), " + s * ", VectorSubs(c, a))
+            print()
             return c
 
         print()
         print()
-        print("Choose what to do with the Vector!")
-        print("You can choose from 'add', 'sub', 'mult' and 'div'")
-        print("You can also draw a vector between two matrices by using 'makeVector'")
+        print("Was möchten Sie mit den Matrizen machen")
+        print("Auswahlmöglichkeiten: 'add', 'sub', 'mult' and 'div'")
+        print("Sie können auch einen Vektor erstellen, mithilfe von: 'makeVector'")
+        print("Oder Sie erstellen eine Ebene mithilfe von 'makeLayer'.")
+        print("Achten Sie auf Groß- und Kleinschreibung")
+        print()
 
         choose = input()
 
@@ -143,7 +149,7 @@ if (n.isdigit() == True):
             print(makeLayer(Vektor1, Vektor2, Vektor3))
         
     else:
-        print("You took the wrong path, buddy. Enter a number next time.")
+        print("Error: Bitte geben Sie eine Zahl an.")
             
 else:
-    print("You took the wrong path, buddy. Enter a number next time.")
+    print("Error: Bitte geben Sie eine Zahl an.")
