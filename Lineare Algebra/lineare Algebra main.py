@@ -99,7 +99,6 @@ if (n.isdigit() == True):
             return c
 
         # Ouput: E: x = a + r*(b-a) + s*(c-a)
-        # Irgendwie Vektor 3 mit einbringen
         def makeLayer(a,b,c):
             print("Geben Sie eine dritte Matrize an, um eine Ebene zu erstellen: ")
 
