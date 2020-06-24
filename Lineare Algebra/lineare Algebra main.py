@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sympy import Eq, solve, symbols
 
 
 """
@@ -32,62 +33,122 @@ x2 = np.linspace(0, 10, N, endpoint=False)
 # vector add
 # wird mit arrays gemacht
 
-print("Choose two Vectors. Default value is 1 ")
 
-print("First: ")
+# TODO wenn string input nicht abbrechen, sondern neuen input anfordern
+
+#Vektor 3 declaren, damit er gecallt werden kann
+
+Vektor3 = 0
+
+print("Geben Sie 2 Matrizen an. (Default Value=1) ")
+
+print("Erste Matrize: ")
 
 Vektor1 = np.array([])
-n = int(input("Enter the dimensions you want:  "))
+n = input("Geben Sie die Dimensionen für die Matrize an:  ")
 
-for i in range(n):
-    v = input("Element:  ")
-    Vektor1 = np.append(Vektor1, float(v))
-print(Vektor1)
+n.isdigit()
 
-print("")
-print("Now the second vector: ")
-
-Vektor2 = np.array([])
-n = int(input("Enter the dimensions you want:  "))
-
-for i in range(n):
-    v = input("Element:  ")
-    Vektor2 = np.append(Vektor2, float(v))
-print(Vektor2)
-
-def VectorAdd(a, b):
-    c = np.add(a,b)
-    return c
-
-def VectorSubs(a, b): 
-    a = Vektor1
-    b = Vektor2
-    str(c = a - b)
-    return "c"
-
-def VectorMulti(a, b): 
-    a = Vektor1
-    b = Vektor2
-    c = a * b 
-    return c
-
-def VectorDivd(a, b): 
-    a = Vektor1
-    b = Vektor2
-    c = a / b
-    return c
-
-print("Choose what to do with the Vector!")
-print("You can choose from 'add', 'sub', 'mult' and 'div'")
-
-choose = input()
-
-if (choose == "add"):
-    print(VectorAdd(Vektor1, Vektor2))
-if (choose == "sub"): 
-    print(VectorSubs(Vektor1, Vektor2))
-if (choose == "div"): 
-    print(VectorDivd(Vektor1, Vektor2))
-if (choose == "mult"): 
-    print(VectorMulti(Vektor1, Vektor2))
+if (n.isdigit() == True):
+    n = int(n)
+    print("Digit check succesful!")
     
+    for i in range(n):
+        v = input("Element:  ")
+        Vektor1 = np.append(Vektor1, float(v))
+    print(Vektor1)
+
+    print("")
+    print("Jetzt die zweite Matrix: ")
+
+    Vektor2 = np.array([])
+    n = input("Geben Sie die Dimensionen für die Matrize an:  ")
+
+    n.isdigit()
+
+    if (n.isdigit() == True):
+        n = int(n)
+        print("Digit check successful!")
+
+        # Code
+        for i in range(n):
+            v = input("Element:  ")
+            Vektor2 = np.append(Vektor2, float(v))
+        print(Vektor2)
+
+        def VectorAdd(a, b):
+            c = np.add(a,b)
+            return c
+
+        def VectorSubs(a, b): 
+            c = np.subtract(a,b)
+            return c
+
+        def VectorMulti(a, b): 
+            c = np.multiply(a,b)
+            return c
+
+        # wenn /0 nicht inf, sondern 0 stehen haben oder so.
+        def VectorDivd(a, b): 
+            c = np.divide(a, b)
+            return c
+
+        def VectorDraw(a, b):
+            c = np.subtract(b, a)
+            print("Vektor zwischen A und B ist: ")
+            return c
+
+        # Ouput: E: x = a + r*(b-a) + s*(c-a)
+        def makeLayer(a,b,c):
+            print("Geben Sie eine dritte Matrize an, um eine Ebene zu erstellen: ")
+
+            Vektor3 = np.array([])
+            n = input("Dimensionen für die Matrize:  ")
+
+            n.isdigit()
+
+            if (n.isdigit() == True):
+                n = int(n)
+                print()
+                print("Digit check successful")
+                print()
+                
+                for i in range(n):
+                    v = input("Element:  ")
+                    Vektor3 = np.append(Vektor1, float(v))
+                print(Vektor3)
+ 
+                print("")
+            c = print("E: x = ", a, " + r * ", VectorSubs(b, a), " + s * ", VectorSubs(c, a))
+            print()
+            return c
+
+        print()
+        print()
+        print("Was möchten Sie mit den Matrizen machen")
+        print("Auswahlmöglichkeiten: 'add', 'sub', 'mult' and 'div'")
+        print("Sie können auch einen Vektor erstellen, mithilfe von: 'makeVector'")
+        print("Oder Sie erstellen eine Ebene mithilfe von 'makeLayer'.")
+        print("Achten Sie auf Groß- und Kleinschreibung")
+        print()
+
+        choose = input()
+
+        if (choose == "add"):
+            print(VectorAdd(Vektor1, Vektor2))
+        if (choose == "sub"): 
+            print(VectorSubs(Vektor1, Vektor2))
+        if (choose == "div"): 
+            print(VectorDivd(Vektor1, Vektor2))
+        if (choose == "mult"): 
+            print(VectorMulti(Vektor1, Vektor2))
+        if (choose == "makeVector"):
+            print(VectorDraw(Vektor1, Vektor2))
+        if (choose == "makeLayer"):
+            print(makeLayer(Vektor1, Vektor2, Vektor3))
+        
+    else:
+        print("Error: Bitte geben Sie eine Zahl an.")
+            
+else:
+    print("Error: Bitte geben Sie eine Zahl an.")
