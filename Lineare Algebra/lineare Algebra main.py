@@ -98,6 +98,27 @@ if (n.isdigit() == True):
             print("Vektor zwischen A und B ist: ")
             return c
 
+        def QuickSub(a, b):
+            z = a-b
+            return z
+        # 
+        def Kreuzprodukt(a, b):
+            Vektor4 = np.array([])
+            c = a[1]*b[2];
+            d = a[2]*b[0];
+            e = a[0]*b[1];
+            f = a[2]*b[1];
+            g = a[0]*b[2]; #Vektor1 und 2 vertauscht?
+            h = a[1]*b[0];
+            cCalc = c-f;
+            Vektor4 = np.append(Vektor4, float(cCalc))
+            dCalc = d-g;
+            Vektor4 = np.append(Vektor4, float(dCalc))
+            eCalc = e-h;
+            Vektor4 = np.append(Vektor4, float(eCalc))
+            print("Normalenvektor: ")
+            return Vektor4
+
         # Ouput: E: x = a + r*(b-a) + s*(c-a)
         def makeLayer(a,b,c):
             print("Geben Sie eine dritte Matrize an, um eine Ebene zu erstellen: ")
@@ -129,6 +150,7 @@ if (n.isdigit() == True):
         print("Auswahlmöglichkeiten: 'add', 'sub', 'mult' and 'div'")
         print("Sie können auch einen Vektor erstellen, mithilfe von: 'makeVector'")
         print("Oder Sie erstellen eine Ebene mithilfe von 'makeLayer'.")
+        print("Es geht auch die Erstellung eines Normalenvektors mithilfe von 'Kreuzprodukt'.")
         print("Achten Sie auf Groß- und Kleinschreibung")
         print()
 
@@ -146,6 +168,8 @@ if (n.isdigit() == True):
             print(VectorDraw(Vektor1, Vektor2))
         if (choose == "makeLayer"):
             print(makeLayer(Vektor1, Vektor2, Vektor3))
+        if (choose == "Kreuzprodukt"):
+            print((Kreuzprodukt(Vektor1, Vektor2)))
         
     else:
         print("Error: Bitte geben Sie eine Zahl an.")

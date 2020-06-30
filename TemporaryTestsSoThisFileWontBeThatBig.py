@@ -1,2 +1,5 @@
+import numpy as np
 
-print(Test)
+list = np.array([5,6,7])
+
+print(list[1])
