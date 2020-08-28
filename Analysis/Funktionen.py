@@ -1,0 +1,6 @@
+# Originalfunktion eingeben
+
+
+
+# Ableitungen berechen
+
